@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     title: "Customers"
 }
 async function Page(props: {
-    searchParams?: {
+    searchParams?: Promise<{
         query: string,
         currentPage: string
-    }
+    }>
 }) {
     const searchParams = await props.searchParams;
     const query = searchParams?.query ?? '';
