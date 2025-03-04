@@ -12,7 +12,7 @@ export default async function CustomersTable({
   currentPage
 }: {
   query: string,
-  currentPage: string
+  currentPage: number
 }) {
   const customers = await fetchFilteredCustomers(query, currentPage)
   return (

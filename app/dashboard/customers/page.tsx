@@ -20,7 +20,7 @@ async function Page(props: {
 }) {
     const searchParams = await props.searchParams;
     const query = searchParams?.query ?? '';
-    const currentPage = searchParams?.currentPage ?? 1;
+    const currentPage = Number(searchParams?.currentPage) ?? 1;
 
     const totalPages = await fetchCustomersPages(query);
 
