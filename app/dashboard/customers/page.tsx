@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 async function Page(props: {
     searchParams?: {
         query: string,
-        currentPage: number
+        currentPage: string
     }
 }) {
     const searchParams = await props.searchParams;
