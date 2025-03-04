@@ -11,7 +11,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   function handleSearch (term:string){
     const params = new URLSearchParams(searchParams)
     params.set('page', '1');
-    if (term && term.length > 3) {
+    if (term && term.length > 2) {
       params.set('query', term);
     } else {
       params.delete('query');
