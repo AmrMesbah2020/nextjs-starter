@@ -34,7 +34,7 @@ async function Page(props: {
                 <CreateCustomer />
             </div>
             <Suspense key={query} fallback={<CustomersTableSkeleton />}>
-                <Table currentPage={currentPage} query={query} />
+                <Table currentPage={query + currentPage} query={query} />
             </Suspense>
             <div className="mt-5 flex w-full justify-center">
                 <Pagination totalPages={totalPages} />
