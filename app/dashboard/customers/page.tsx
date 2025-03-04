@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 async function Page(props: {
     searchParams?: Promise<{
         query: string,
-        currentPage: string
+        page: string
     }>
 }) {
     const searchParams = await props.searchParams;
     const query = searchParams?.query ?? '';
-    const currentPage = Number(searchParams?.currentPage) ?? 1;
+    const currentPage = Number(searchParams?.page) ?? 1;
 
     const totalPages = await fetchCustomersPages(query);
 
